@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#1a1a1a">
-    <title>Will Sigmon | Digital Equity Advocate & Nonprofit Founder</title>
-    <meta name="description" content="Founder of HubZone Technology Initiative. Turning surplus laptops into life-changing opportunities for 2,500+ NC families. Let's connect.">
+    <title>Will Sigmon | Digital Equity Advocate</title>
+    <meta name="description" content="Director of Business Development at HubZone Technology Initiative. 18 years in tech. Turning surplus laptops into life-changing opportunities for 2,500+ NC families.">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Will Sigmon | Digital Equity Advocate">
-    <meta property="og:description" content="Founder of HTI - transforming surplus tech into community impact across North Carolina.">
+    <meta property="og:description" content="Director of Business Development at HTI. 18 years in tech. Transforming surplus tech into community impact across North Carolina.">
     <meta property="og:image" content="https://littleguyhti.vercel.app/photo.jpg">
     <meta property="og:url" content="https://thelittleguyfromhti.com">
     <meta property="og:type" content="profile">
@@ -17,7 +17,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Will Sigmon | Digital Equity Advocate">
-    <meta name="twitter:description" content="Founder of HTI - transforming surplus tech into community impact.">
+    <meta name="twitter:description" content="Director of Business Development at HTI. 18 years in tech. Transforming surplus tech into community impact.">
     <meta name="twitter:image" content="https://littleguyhti.vercel.app/photo.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,7 +65,7 @@
         /* Hero Section */
         .hero {
             background: var(--dark-1);
-            padding: 50px 25px 40px;
+            padding: 40px 25px 35px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -100,16 +100,45 @@
             50% { transform: translate(3%, 3%); }
         }
 
+        /* QR Code - Hero */
+        .qr-hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .qr-box {
+            background: white;
+            padding: 8px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .qr-box img {
+            display: block;
+            width: 80px;
+            height: 80px;
+        }
+
+        .qr-box-large img {
+            width: 120px;
+            height: 120px;
+        }
+
         .photo-ring {
-            width: 150px;
-            height: 150px;
-            margin: 0 auto 20px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
             background: var(--gradient-gold);
             padding: 4px;
             box-shadow: 0 15px 50px rgba(245,132,32,0.35);
             position: relative;
             z-index: 1;
+            flex-shrink: 0;
         }
 
         .photo-ring img {
@@ -119,31 +148,39 @@
             object-fit: cover;
         }
 
+        .qr-hint {
+            font-size: 10px;
+            color: rgba(255,255,255,0.6);
+            margin-top: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
         .hero h1 {
             font-family: 'DM Sans', sans-serif;
-            font-size: 34px;
+            font-size: 32px;
             font-weight: 900;
             color: white;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             letter-spacing: -0.5px;
             position: relative;
             z-index: 1;
         }
 
         .hero .tagline {
-            font-size: 16px;
+            font-size: 15px;
             color: var(--orange-1);
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             position: relative;
             z-index: 1;
         }
 
         .hero .bio {
-            font-size: 15px;
+            font-size: 14px;
             color: rgba(255,255,255,0.85);
             line-height: 1.6;
-            max-width: 340px;
+            max-width: 320px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
@@ -157,8 +194,8 @@
         .stats-bar {
             display: flex;
             justify-content: center;
-            gap: 30px;
-            padding: 20px;
+            gap: 25px;
+            padding: 18px 20px;
             background: var(--dark-2);
             border-bottom: 3px solid var(--orange-1);
         }
@@ -169,7 +206,7 @@
 
         .stat-num {
             font-family: 'DM Sans', sans-serif;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 900;
             background: var(--gradient-brand);
             -webkit-background-clip: text;
@@ -178,7 +215,7 @@
         }
 
         .stat-label {
-            font-size: 11px;
+            font-size: 10px;
             color: rgba(255,255,255,0.7);
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -186,17 +223,17 @@
 
         /* Main Content */
         .content {
-            padding: 30px 25px;
+            padding: 25px 25px 30px;
         }
 
         .section-title {
             font-family: 'DM Sans', sans-serif;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
             color: var(--orange-1);
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
 
         /* Primary CTA */
@@ -205,14 +242,14 @@
             background: var(--gradient-brand);
             color: white;
             text-decoration: none;
-            padding: 18px 24px;
-            border-radius: 16px;
+            padding: 16px 24px;
+            border-radius: 14px;
             font-family: 'DM Sans', sans-serif;
             font-weight: 700;
-            font-size: 17px;
+            font-size: 16px;
             text-align: center;
             box-shadow: 0 8px 25px rgba(245,132,32,0.35);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             transition: all 0.3s ease;
         }
 
@@ -223,23 +260,23 @@
 
         .primary-cta span {
             display: block;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 500;
             opacity: 0.9;
-            margin-top: 4px;
+            margin-top: 3px;
         }
 
         /* Link Cards */
         .link-card {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 14px;
             background: white;
-            padding: 16px 18px;
-            border-radius: 14px;
+            padding: 14px 16px;
+            border-radius: 12px;
             text-decoration: none;
             color: var(--dark-1);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             border: 1px solid #eee;
             transition: all 0.25s ease;
@@ -252,9 +289,9 @@
         }
 
         .link-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
             background: linear-gradient(135deg, #fff4e0, #ffe8c0);
             display: flex;
             align-items: center;
@@ -263,40 +300,40 @@
         }
 
         .link-icon svg {
-            width: 22px;
-            height: 22px;
+            width: 20px;
+            height: 20px;
             fill: var(--orange-1);
         }
 
         .link-text h3 {
             font-family: 'DM Sans', sans-serif;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 700;
-            margin-bottom: 2px;
+            margin-bottom: 1px;
         }
 
         .link-text p {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--text);
         }
 
         .link-arrow {
             margin-left: auto;
             color: #ccc;
-            font-size: 18px;
+            font-size: 16px;
         }
 
         /* Section Divider */
         .divider {
             height: 1px;
             background: linear-gradient(90deg, transparent, #e5e5e5, transparent);
-            margin: 25px 0;
+            margin: 20px 0;
         }
 
         /* Quick Contact Row */
         .quick-contact {
             display: flex;
-            gap: 10px;
+            gap: 8px;
         }
 
         .quick-btn {
@@ -304,13 +341,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            padding: 14px;
+            gap: 6px;
+            padding: 12px;
             background: var(--dark-1);
             color: white;
             text-decoration: none;
-            border-radius: 12px;
-            font-size: 14px;
+            border-radius: 10px;
+            font-size: 13px;
             font-weight: 600;
             transition: all 0.25s ease;
         }
@@ -321,8 +358,8 @@
         }
 
         .quick-btn svg {
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
             fill: currentColor;
         }
 
@@ -330,14 +367,14 @@
         .social-row {
             display: flex;
             justify-content: center;
-            gap: 12px;
-            margin-top: 25px;
+            gap: 10px;
+            margin-top: 20px;
         }
 
         .social-link {
-            width: 48px;
-            height: 48px;
-            border-radius: 14px;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
             background: white;
             border: 2px solid #e5e5e5;
             display: flex;
@@ -348,8 +385,8 @@
         }
 
         .social-link svg {
-            width: 22px;
-            height: 22px;
+            width: 20px;
+            height: 20px;
             fill: var(--dark-1);
             transition: fill 0.3s ease;
         }
@@ -364,22 +401,73 @@
             fill: var(--orange-1);
         }
 
-        /* Footer */
+        /* Footer with QR */
         .footer {
             text-align: center;
-            padding: 20px;
-            background: #f8f8f8;
-            border-top: 1px solid #eee;
+            padding: 25px 20px 30px;
+            background: var(--dark-1);
+        }
+
+        .footer-qr {
+            margin-bottom: 15px;
+        }
+
+        .footer-qr .qr-box {
+            display: inline-block;
+        }
+
+        .footer-qr-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .footer-qr-hint {
+            font-size: 11px;
+            color: rgba(255,255,255,0.5);
+            margin-top: 8px;
         }
 
         .footer p {
-            font-size: 12px;
-            color: #999;
+            font-size: 11px;
+            color: rgba(255,255,255,0.5);
+            margin-top: 15px;
         }
 
         .footer a {
             color: var(--orange-1);
             text-decoration: none;
+        }
+
+        /* Testimonial */
+        .testimonial {
+            background: linear-gradient(180deg, #fff8f0 0%, var(--cream) 100%);
+            padding: 20px 25px;
+            text-align: center;
+            border-bottom: 1px solid #f0e8e0;
+        }
+
+        .testimonial-quote {
+            font-size: 15px;
+            font-style: italic;
+            color: var(--dark-1);
+            line-height: 1.55;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-quote::before { content: '"'; }
+        .testimonial-quote::after { content: '"'; }
+
+        .testimonial-author {
+            font-size: 12px;
+            color: var(--orange-1);
+            font-weight: 600;
+        }
+
+        .testimonial-role {
+            font-size: 11px;
+            color: var(--text);
         }
 
         /* Reduced motion */
@@ -395,30 +483,43 @@
     <div class="container">
         <!-- Hero -->
         <section class="hero">
-            <div class="photo-ring">
-                <img src="photo.jpg" alt="Will Sigmon" width="142" height="142">
+            <div class="qr-hero">
+                <div class="qr-box">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ASigmon%3BWill%3B%3B%3B%0AFN%3AWill%20Sigmon%0AORG%3AHubZone%20Technology%20Initiative%0ATITLE%3ADirector%20of%20Business%20Development%0ATEL%3BTYPE%3DCELL%3A%2B12525900240%0AEMAIL%3Awsigmon%40hubzonetech.org%0AURL%3Ahttps%3A%2F%2Fthelittleguyfromhti.com%0AEND%3AVCARD" alt="Scan to save contact" width="80" height="80">
+                    <p class="qr-hint">Save Contact</p>
+                </div>
+                <div class="photo-ring">
+                    <img src="photo.jpg" alt="Will Sigmon" width="122" height="122">
+                </div>
             </div>
             <h1>Will Sigmon</h1>
-            <p class="tagline">Digital Equity Advocate & Nonprofit Founder</p>
+            <p class="tagline">Director of Business Development · HTI</p>
             <p class="bio">
-                I turn <strong>surplus corporate laptops</strong> into <strong>life-changing opportunities</strong> for families across North Carolina. Always looking to connect with people who want to make an impact.
+                I bridge the <strong>digital divide</strong> by turning surplus corporate tech into <strong>life-changing opportunities</strong> for families across North Carolina.
             </p>
         </section>
 
         <!-- Stats -->
         <div class="stats-bar">
             <div class="stat">
+                <div class="stat-num">18</div>
+                <div class="stat-label">Years in Tech</div>
+            </div>
+            <div class="stat">
                 <div class="stat-num">2,500+</div>
                 <div class="stat-label">Devices Given</div>
             </div>
             <div class="stat">
                 <div class="stat-num">$600K</div>
-                <div class="stat-label">Grant Funded</div>
+                <div class="stat-label">Funded</div>
             </div>
-            <div class="stat">
-                <div class="stat-num">15</div>
-                <div class="stat-label">NC Counties</div>
-            </div>
+        </div>
+
+        <!-- Testimonial -->
+        <div class="testimonial">
+            <p class="testimonial-quote">Has his finger on the pulse of technology like nobody I've ever met in 20 years.</p>
+            <p class="testimonial-author">Mike Rundle</p>
+            <p class="testimonial-role">CEO, Treeo</p>
         </div>
 
         <!-- Main Content -->
@@ -428,7 +529,7 @@
             <!-- Primary CTA -->
             <a href="https://calendar.app.google/YqoNTKNZMMrCfNCNA" target="_blank" class="primary-cta">
                 Book a 15-Minute Call
-                <span>Let's talk partnerships, donations, or just ideas</span>
+                <span>Partnerships, donations, or just ideas</span>
             </a>
 
             <!-- Link Cards -->
@@ -438,7 +539,7 @@
                 </div>
                 <div class="link-text">
                     <h3>HubZone Technology Initiative</h3>
-                    <p>See the nonprofit I founded</p>
+                    <p>Our 501(c)(3) nonprofit mission</p>
                 </div>
                 <span class="link-arrow">→</span>
             </a>
@@ -449,12 +550,12 @@
                 </div>
                 <div class="link-text">
                     <h3>LinkedIn</h3>
-                    <p>Connect with me professionally</p>
+                    <p>Connect professionally</p>
                 </div>
                 <span class="link-arrow">→</span>
             </a>
 
-            <a href="mailto:wsigmon@hubzonetech.org?subject=Saw your page - let's connect" class="link-card">
+            <a href="mailto:wsigmon@hubzonetech.org?subject=Saw your page" class="link-card">
                 <div class="link-icon">
                     <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
                 </div>
@@ -493,8 +594,15 @@
             </div>
         </div>
 
-        <!-- Footer -->
+        <!-- Footer with QR -->
         <div class="footer">
+            <div class="footer-qr">
+                <p class="footer-qr-label">Save My Contact</p>
+                <div class="qr-box qr-box-large">
+                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ASigmon%3BWill%3B%3B%3B%0AFN%3AWill%20Sigmon%0AORG%3AHubZone%20Technology%20Initiative%0ATITLE%3ADirector%20of%20Business%20Development%0ATEL%3BTYPE%3DCELL%3A%2B12525900240%0AEMAIL%3Awsigmon%40hubzonetech.org%0AURL%3Ahttps%3A%2F%2Fthelittleguyfromhti.com%0AEND%3AVCARD" alt="Scan to save contact" width="120" height="120">
+                </div>
+                <p class="footer-qr-hint">Scan with your phone camera</p>
+            </div>
             <p>501(c)(3) Nonprofit · <a href="https://hubzonetech.vercel.app">hubzonetech.org</a></p>
         </div>
     </div>
