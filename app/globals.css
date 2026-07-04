@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette (ported 1:1 from the static site's :root variables) */
+  --color-gold-1: #ffd000;
+  --color-gold-2: #fdb715;
+  --color-orange-1: #f58420;
+  --color-orange-2: #e85d2c;
+  --color-dark-1: #1a1a1a;
+  --color-dark-2: #2c2c2c;
+  --color-cream: #fffbf5;
+  --color-ink-muted: #4a4a4a;
+
+  /* shadcn/ui primitives are restyled per-use; keep base token inert */
+  --color-border: transparent;
+
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: var(--font-dm-sans), sans-serif;
+
+  --animate-slide-gradient: slide-gradient 3s linear infinite;
+  --animate-float-slow: float-slow 15s ease-in-out infinite;
+
+  @keyframes slide-gradient {
+    0%,
+    100% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 0%;
+    }
+  }
+
+  @keyframes float-slow {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(3%, 3%);
+    }
+  }
+}
+
+@utility bg-gradient-brand {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-gold-2),
+    var(--color-orange-1) 58%,
+    var(--color-orange-2)
+  );
+}
+
+@utility bg-gradient-gold {
+  background-image: linear-gradient(
+    135deg,
+    var(--color-gold-1),
+    var(--color-gold-2),
+    var(--color-orange-1),
+    var(--color-orange-2)
+  );
+}
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-dark-1);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Curly-free quote marks rendered via pseudo-elements, as on the static site */
+  .testimonial-quote::before,
+  .testimonial-quote::after {
+    content: '"';
+  }
+}
