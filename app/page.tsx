@@ -5,25 +5,22 @@ const PHONE = "+12525900240";
 const EMAIL = "wsigmon@hubzonetech.org";
 const BOOKING_URL = "https://calendar.app.google/YqoNTKNZMMrCfNCNA";
 
-const VCARD_QR_SRC =
-  "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ASigmon%3BWill%3B%3B%3B%0AFN%3AWill%20Sigmon%0AORG%3AHubZone%20Technology%20Initiative%0ATITLE%3ADirector%20of%20Business%20Development%0ATEL%3BTYPE%3DCELL%3A%2B12525900240%0AEMAIL%3Awsigmon%40hubzonetech.org%0AURL%3Ahttps%3A%2F%2Fthelittleguyfromhti.com%0AEND%3AVCARD";
-
 const SITE_QR_SRC =
   "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fthelittleguyfromhti.com";
 
 const STATS = [
-  { num: "2,500+", label: "Devices Given" },
-  { num: "15", label: "NC Counties" },
-  { num: "$600K", label: "Grant Funded" },
+  { num: "3,500+", label: "Laptops Collected" },
+  { num: "2,500+", label: "HTI Chromebooks Distributed" },
+  { num: "15", label: "Counties Served" },
 ] as const;
 
 function Stat({ num, label }: { num: string; label: string }) {
   return (
-    <div className="text-center">
-      <div className="font-display text-[22px] font-black bg-gradient-brand bg-clip-text text-transparent">
+    <div className="flex-1 text-center">
+      <div className="font-sans text-[21px] font-black bg-gradient-brand bg-clip-text text-transparent">
         {num}
       </div>
-      <div className="text-[10px] text-white/70 uppercase tracking-[0.5px]">
+      <div className="text-[10px] leading-[1.25] text-white/70 uppercase tracking-[0.55px]">
         {label}
       </div>
     </div>
@@ -47,11 +44,12 @@ function LinkCard({
     <a
       href={href}
       target={external ? "_blank" : undefined}
-      className="flex items-center gap-3.5 bg-white px-4 py-3.5 rounded-xl text-dark-1 mb-2 shadow-[0_2px_8px_rgba(0,0,0,0.06)] border border-[#eee] transition-all duration-250 ease-[ease] hover:translate-x-1 hover:border-orange-1 hover:shadow-[0_4px_15px_rgba(245,132,32,0.15)]"
+      rel={external ? "noreferrer" : undefined}
+      className="flex items-center gap-3.5 bg-paper px-4 py-3.5 rounded-[8px] text-dark-1 mb-2 border border-rule transition-all duration-250 ease-[ease] hover:translate-x-1 hover:border-orange-1 hover:shadow-[0_5px_14px_rgba(245,132,32,0.12)]"
     >
       {icon}
       <div>
-        <h3 className="font-display text-sm font-bold mb-px">{title}</h3>
+        <h3 className="font-sans text-sm font-bold mb-px">{title}</h3>
         <p className="text-xs text-ink-muted">{description}</p>
       </div>
       <span className="ml-auto text-[#ccc] text-base">→</span>
@@ -71,7 +69,7 @@ function QuickButton({
   return (
     <a
       href={href}
-      className="flex-1 flex items-center justify-center gap-1.5 p-3 bg-dark-1 text-white rounded-[10px] text-[13px] font-semibold transition-all duration-250 ease-[ease] hover:bg-dark-2 hover:-translate-y-0.5"
+      className="flex-1 flex items-center justify-center gap-1.5 p-3 bg-dark-1 text-white rounded-[8px] text-[13px] font-semibold transition-all duration-250 ease-[ease] hover:bg-dark-2 hover:-translate-y-0.5"
     >
       <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current">
         <path d={path} />
@@ -94,8 +92,9 @@ function SocialLink({
     <a
       href={href}
       target="_blank"
+      rel="noreferrer"
       aria-label={label}
-      className="group w-11 h-11 rounded-xl bg-white border-2 border-[#e5e5e5] flex items-center justify-center transition-all duration-300 ease-[ease] hover:border-orange-1 hover:-translate-y-[3px] hover:shadow-[0_6px_20px_rgba(245,132,32,0.2)]"
+      className="group w-11 h-11 rounded-[8px] bg-paper border-2 border-rule flex items-center justify-center transition-all duration-300 ease-[ease] hover:border-orange-1 hover:-translate-y-[3px] hover:shadow-[0_6px_20px_rgba(245,132,32,0.2)]"
     >
       <svg
         viewBox="0 0 24 24"
@@ -108,27 +107,15 @@ function SocialLink({
 }
 
 const iconBoxClass =
-  "w-10 h-10 rounded-[10px] bg-[linear-gradient(135deg,#fff4e0,#ffe8c0)] flex items-center justify-center shrink-0";
+  "w-10 h-10 rounded-[8px] bg-[linear-gradient(135deg,#fff4e0,#ffe8c0)] flex items-center justify-center shrink-0";
 
 export default function Home() {
   return (
     <div className="max-w-[480px] mx-auto bg-cream min-h-screen shadow-[0_0_80px_rgba(0,0,0,0.5)]">
       {/* Hero */}
-      <section className="bg-dark-1 pt-10 px-[25px] pb-[35px] text-center relative overflow-hidden before:content-[''] before:absolute before:top-0 before:inset-x-0 before:h-1 before:bg-gradient-gold before:bg-[length:200%_100%] before:animate-slide-gradient after:content-[''] after:absolute after:-inset-1/2 after:bg-[radial-gradient(circle_at_30%_40%,rgba(253,183,21,0.1)_0%,transparent_50%)] after:animate-float-slow after:pointer-events-none">
-        <div className="flex items-center justify-center gap-5 mb-5 relative z-[1]">
-          <div className="bg-white p-2 rounded-xl shadow-[0_8px_25px_rgba(0,0,0,0.3)]">
-            <img
-              src={VCARD_QR_SRC}
-              alt="Scan to save contact"
-              width={80}
-              height={80}
-              className="block w-20 h-20"
-            />
-            <p className="text-[10px] text-white/60 mt-1.5 uppercase tracking-[0.5px]">
-              Save Contact
-            </p>
-          </div>
-          <div className="w-[130px] h-[130px] rounded-full bg-gradient-gold p-1 shadow-[0_15px_50px_rgba(245,132,32,0.35)] relative z-[1] shrink-0">
+      <section className="bg-dark-1 pt-[42px] px-[25px] pb-9 text-center relative overflow-hidden before:content-[''] before:absolute before:top-0 before:inset-x-0 before:h-1 before:bg-gradient-gold before:bg-[length:200%_100%] before:animate-slide-gradient after:content-[''] after:absolute after:-inset-1/2 after:bg-[radial-gradient(circle_at_30%_40%,rgba(253,183,21,0.1)_0%,transparent_50%)] after:animate-float-slow after:pointer-events-none">
+        <div className="flex items-center justify-center mb-[18px] relative z-[1]">
+          <div className="w-[130px] h-[130px] rounded-full bg-gradient-gold p-1 shadow-[0_14px_38px_rgba(245,132,32,0.28)] relative z-[1] shrink-0">
             <img
               src="/photo.jpg"
               alt="Will Sigmon"
@@ -138,22 +125,21 @@ export default function Home() {
             />
           </div>
         </div>
-        <h1 className="font-display text-[32px] font-black text-white mb-1.5 tracking-[-0.5px] relative z-[1]">
+        <h1 className="font-display text-[34px] font-bold text-white mb-1.5 tracking-[-0.8px] relative z-[1]">
           Will Sigmon
         </h1>
-        <p className="text-[15px] text-orange-1 font-semibold mb-[15px] relative z-[1]">
-          BD Director, HTI &amp; Area Director, Uniquely You!
+        <p className="text-[15px] text-gold-2 font-semibold mb-[15px] relative z-[1]">
+          Director of Business Development · HUBZone Technology Initiative
         </p>
-        <p className="text-sm text-white/85 leading-[1.6] max-w-[320px] mx-auto relative z-[1]">
-          Bridging the <strong className="text-gold-2">digital divide</strong>{" "}
-          at HTI and supporting the local{" "}
-          <strong className="text-gold-2">disability community</strong> through
-          Uniquely You! across the NC Triangle.
+        <p className="text-sm text-white/85 leading-[1.6] max-w-[350px] mx-auto relative z-[1]">
+          Helping turn surplus laptops into secure{" "}
+          <strong className="text-gold-2">HTI Chromebooks</strong> and expand
+          digital opportunity across North Carolina.
         </p>
       </section>
 
       {/* Stats */}
-      <div className="flex justify-center gap-[25px] py-[18px] px-5 bg-dark-2 border-b-[3px] border-orange-1">
+      <div className="flex justify-center gap-2 py-[18px] px-[14px] bg-dark-2 border-b-[3px] border-orange-1">
         {STATS.map((stat) => (
           <Stat key={stat.label} num={stat.num} label={stat.label} />
         ))}
@@ -170,8 +156,8 @@ export default function Home() {
       </div>
 
       {/* Main Content */}
-      <div className="pt-[25px] px-[25px] pb-[30px]">
-        <p className="font-display text-xs font-bold text-orange-1 uppercase tracking-[1px] mb-3">
+      <div className="pt-7 px-[25px] pb-8">
+        <p className="font-sans text-xs font-bold text-orange-1 uppercase tracking-[1px] mb-3">
           Let&apos;s Connect
         </p>
 
@@ -179,7 +165,7 @@ export default function Home() {
         <a
           href={BOOKING_URL}
           target="_blank"
-          className="block bg-gradient-brand text-white py-4 px-6 rounded-[14px] font-display font-bold text-base text-center shadow-[0_8px_25px_rgba(245,132,32,0.35)] mb-2.5 transition-all duration-300 ease-[ease] hover:-translate-y-0.5 hover:shadow-[0_12px_35px_rgba(245,132,32,0.45)]"
+          className="block bg-gradient-brand text-white py-4 px-6 rounded-[10px] font-sans font-bold text-base text-center shadow-[0_8px_20px_rgba(228,89,39,0.24)] mb-2.5 transition-all duration-300 ease-[ease] hover:-translate-y-0.5 hover:shadow-[0_12px_30px_rgba(228,89,39,0.36)]"
         >
           Book a 15-Minute Call
           <span className="block text-[11px] font-medium opacity-90 mt-[3px]">
@@ -189,27 +175,13 @@ export default function Home() {
 
         {/* Link Cards */}
         <LinkCard
-          href="https://hubzonetech.vercel.app"
+          href="https://hubzonetech.org"
           title="HUBZone Technology Initiative"
-          description="Our 501(c)(3) nonprofit mission to bridge the divide"
+          description="Securely repurposing technology and expanding digital opportunity"
           icon={
             <div className={iconBoxClass}>
               <svg viewBox="0 0 24 24" className="w-5 h-5 fill-orange-1">
                 <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-              </svg>
-            </div>
-          }
-        />
-
-        <LinkCard
-          href="https://uniquelyyoumag.com"
-          external
-          title="Uniquely You! Magazine"
-          description="Mailed monthly to the local NC disability community"
-          icon={
-            <div className="w-10 h-10 rounded-[10px] bg-[linear-gradient(135deg,#e0f2fe,#bae6fd)] flex items-center justify-center shrink-0">
-              <svg viewBox="0 0 24 24" className="w-5 h-5 fill-[#0284c7]">
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
               </svg>
             </div>
           }
@@ -244,7 +216,7 @@ export default function Home() {
 
         <Separator className="my-5 h-px bg-[linear-gradient(90deg,transparent,#e5e5e5,transparent)]" />
 
-        <p className="font-display text-xs font-bold text-orange-1 uppercase tracking-[1px] mb-3">
+        <p className="font-sans text-xs font-bold text-orange-1 uppercase tracking-[1px] mb-3">
           Quick Contact
         </p>
         <div className="flex gap-2">
@@ -284,9 +256,9 @@ export default function Home() {
       <div className="text-center pt-[25px] px-5 pb-[30px] bg-dark-1">
         <div className="mb-[15px]">
           <p className="text-[13px] font-semibold text-white mb-2.5">
-            Share My Website
+            Share HTI
           </p>
-          <div className="inline-block bg-white p-2 rounded-xl shadow-[0_8px_25px_rgba(0,0,0,0.3)]">
+          <div className="inline-block bg-white p-2 rounded-[8px] shadow-[0_8px_25px_rgba(0,0,0,0.3)]">
             <img
               src={SITE_QR_SRC}
               alt="Scan to visit thelittleguyfromhti.com"
@@ -301,7 +273,7 @@ export default function Home() {
         </div>
         <p className="text-[11px] text-white/50 mt-[15px]">
           501(c)(3) Nonprofit ·{" "}
-          <a href="https://hubzonetech.vercel.app" className="text-orange-1">
+          <a href="https://hubzonetech.org" className="text-orange-1">
             hubzonetech.org
           </a>
         </p>

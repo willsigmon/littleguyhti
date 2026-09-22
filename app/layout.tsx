@@ -1,18 +1,17 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Sans, Inter } from "next/font/google";
+import { DM_Sans, Fraunces } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-const inter = Inter({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-inter",
+  variable: "--font-fraunces",
   display: "swap",
 });
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["700", "900"],
+  weight: ["400", "500", "600", "700", "900"],
   variable: "--font-dm-sans",
   display: "swap",
 });
@@ -24,11 +23,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Will Sigmon | Digital Equity Advocate",
   description:
-    "Director of Business Development at HUBZone Technology Initiative. Turning surplus laptops into life-changing opportunities for 2,500+ NC families.",
+    "Will Sigmon, Director of Business Development at HUBZone Technology Initiative. Helping turn surplus laptops into secure HTI Chromebooks across North Carolina.",
   openGraph: {
     title: "Will Sigmon | Digital Equity Advocate",
     description:
-      "Director of Business Development at HTI. Transforming surplus tech into community impact across North Carolina.",
+      "Helping turn surplus laptops into secure HTI Chromebooks and expand digital opportunity across North Carolina.",
     images: [OG_IMAGE],
     url: SITE_URL,
     type: "profile",
@@ -37,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Will Sigmon | Digital Equity Advocate",
     description:
-      "Director of Business Development at HTI. Transforming surplus tech into community impact.",
+      "Helping turn surplus laptops into secure HTI Chromebooks across North Carolina.",
     images: [OG_IMAGE],
   },
 };
@@ -54,7 +53,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${dmSans.variable}`}>
+      <body className={`${fraunces.variable} ${dmSans.variable}`}>
         {children}
         <Script id="vercel-analytics-init" strategy="beforeInteractive">
           {`window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };`}

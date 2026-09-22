@@ -8,14 +8,16 @@
   --color-orange-2: #e85d2c;
   --color-dark-1: #1a1a1a;
   --color-dark-2: #2c2c2c;
-  --color-cream: #fffbf5;
-  --color-ink-muted: #4a4a4a;
+  --color-cream: #fffaf1;
+  --color-paper: #fffdf8;
+  --color-ink-muted: #413c38;
+  --color-rule: #eadfce;
 
   /* shadcn/ui primitives are restyled per-use; keep base token inert */
   --color-border: transparent;
 
-  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-display: var(--font-dm-sans), sans-serif;
+  --font-sans: var(--font-dm-sans), sans-serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
 
   --animate-slide-gradient: slide-gradient 3s linear infinite;
   --animate-float-slow: float-slow 15s ease-in-out infinite;
