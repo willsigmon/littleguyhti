@@ -17,10 +17,11 @@ const dmSans = DM_Sans({
 });
 
 const SITE_URL = "https://thelittleguyfromhti.com";
-const OG_IMAGE = "https://littleguyhti.vercel.app/photo.jpg";
+const OG_IMAGE = `${SITE_URL}/photo.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  alternates: { canonical: "/" },
   title: "Will Sigmon | Digital Equity Advocate",
   description:
     "Will Sigmon, Director of Business Development at HUBZone Technology Initiative. Helping turn surplus laptops into secure HTI Chromebooks across North Carolina.",

@@ -112,6 +112,7 @@ const iconBoxClass =
 export default function Home() {
   return (
     <div className="max-w-[480px] mx-auto bg-cream min-h-screen shadow-[0_0_80px_rgba(0,0,0,0.5)]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "Person", "@id": "https://thelittleguyfromhti.com/#will-sigmon", "name": "Will Sigmon", "url": "https://thelittleguyfromhti.com/", "image": "https://thelittleguyfromhti.com/photo.jpg", "jobTitle": "Director of Business Development", "worksFor": {"@type": "Organization", "name": "HUBZone Technology Initiative", "url": "https://hubzonetech.org"}, "sameAs": ["https://linkedin.com/in/willsigmon"]}) }} />
       {/* Hero */}
       <section className="bg-dark-1 pt-[42px] px-[25px] pb-9 text-center relative overflow-hidden before:content-[''] before:absolute before:top-0 before:inset-x-0 before:h-1 before:bg-gradient-gold before:bg-[length:200%_100%] before:animate-slide-gradient after:content-[''] after:absolute after:-inset-1/2 after:bg-[radial-gradient(circle_at_30%_40%,rgba(253,183,21,0.1)_0%,transparent_50%)] after:animate-float-slow after:pointer-events-none">
         <div className="flex items-center justify-center mb-[18px] relative z-[1]">
