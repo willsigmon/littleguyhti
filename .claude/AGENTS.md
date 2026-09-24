@@ -10,7 +10,7 @@ Simple landing page for HubZone Technology Initiative's Little Guy program.
 
 ### Workflow
 - Autonomous execution, parallel agents when possible
-- Haiku/Sonnet only (no Opus)
+- Use the current task's selected model and current global capability/review policy. Do not impose historical per-repository model-name restrictions.
 
 ### Code Standards
 - Immutability enforced, 800 line max
